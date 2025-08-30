@@ -31,7 +31,7 @@ st.markdown("**Type your info manually**")
 manual_input = st.text_area("Describe your background, skills, and goals")
 
 
-with st.expander("⚙️ Advanced Settings"):
+with st.expander("Advanced Settings"):
     temperature = st.slider("Temperature", 0.0, 1.5, 0.7)
     top_p = st.slider("Top-p (nucleus sampling)", 0.0, 1.0, 0.9)
     top_k = st.slider("Top-k sampling", 0, 100, 50)
@@ -79,4 +79,5 @@ if final_input:
         st.write(result)
 else:
     st.info("📝 Please upload a resume or enter your skills manually.")
+
 
