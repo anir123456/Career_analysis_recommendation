@@ -23,8 +23,8 @@ if uploaded_file is not None:
     pages = loader.load()
     resume_text = "\n\n".join([page.page_content for page in pages])
 
-    st.success("✅ Resume uploaded and parsed!")
-    st.text_area("📄 Extracted Resume Text:", resume_text, height=200)
+    st.success(" Resume uploaded and parsed!")
+    st.text_area(" Extracted Resume Text:", resume_text, height=200)
 
 
 st.markdown("**Type your info manually**")
@@ -79,3 +79,4 @@ if final_input:
         st.write(result)
 else:
     st.info("📝 Please upload a resume or enter your skills manually.")
+
