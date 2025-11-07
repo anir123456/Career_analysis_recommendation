@@ -6,7 +6,7 @@ from langchain_groq import ChatGroq
 from langchain_community.document_loaders import PyPDFLoader
 
 # Set your Groq API Key
-os.environ["GROQ_API_KEY"] = "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"  # Replace with actual key
+os.environ["GROQ_API_KEY"] = "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"  # Replace with actual key
 
 st.title("Career Analysis from Resume")
 st.markdown("Upload your **resume** or describe your **skills & goals**, and get smart career suggestions!")
@@ -79,6 +79,7 @@ if final_input:
         st.write(result)
 else:
     st.info("📝 Please upload a resume or enter your skills manually.")
+
 
 
 
