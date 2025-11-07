@@ -42,7 +42,7 @@ final_input = resume_text if resume_text.strip() != "" else manual_input.strip()
 
 llm = ChatGroq(
     groq_api_key=os.environ["GROQ_API_KEY"],
-    model="Llama3-8b-8192",
+    model="llama-3.1-8b-instant",
     temperature=0.7,
     top_p=1
 
@@ -79,5 +79,6 @@ if final_input:
         st.write(result)
 else:
     st.info("📝 Please upload a resume or enter your skills manually.")
+
 
 
