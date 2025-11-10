@@ -5,13 +5,13 @@ from langchain.chains import LLMChain
 from langchain_groq import ChatGroq
 from langchain_community.document_loaders import PyPDFLoader
 
-# Set your Groq API Key
-os.environ["GROQ_API_KEY"] = "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"  # Replace with actual key
+
+os.environ["GROQ_API_KEY"] = "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"
 
 st.title("Career Analysis from Resume")
 st.markdown("Upload your **resume** or describe your **skills & goals**, and get smart career suggestions!")
 
-# --- Resume Upload ---
+
 resume_text = ""
 uploaded_file = st.file_uploader("Upload your resume", type=["pdf"])
 
@@ -68,10 +68,9 @@ Career Suggestions:
 """
 )
 
-# --- Chain ---
 chain = LLMChain(llm=llm, prompt=prompt)
 
-# --- Generate Output ---
+
 if final_input:
     with st.spinner("🔍 Analyzing your profile..."):
         result = chain.run(final_input)
@@ -79,6 +78,7 @@ if final_input:
         st.write(result)
 else:
     st.info("📝 Please upload a resume or enter your skills manually.")
+
 
 
 
